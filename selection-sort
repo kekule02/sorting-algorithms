@@ -1,0 +1,11 @@
+def selection_sort(arr):
+    arrLength = len(arr)
+    
+    for i in range(arrLength):
+        cur_index = i
+        for j in range(i + 1, arrLength):
+            if arr[j] < arr[cur_index]:
+                cur_index = j
+        arr[i], arr[cur_index] = arr[cur_index], arr[i]
+        
+    return arr
